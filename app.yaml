@@ -5,7 +5,7 @@ api_version: 1
 
 handlers:
 - url: /.*
-  script: helloworld.py
+  script: main.py
   
 - url: /stats.*
   script: $PYTHON_LIB/google/appengine/ext/appstats/ui.py

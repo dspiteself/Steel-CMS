@@ -1,0 +1,45 @@
+Steel CMS
+
+The goal: Create the “drupal” of appengine/python 
+
+modularity key.
+
+page router
+ look-up user URL->(context_handler,contex_key,module_array,
+
+load components connected to key
+
+each module needs a key =module name
+(ex. pages, auth, comments, widgets,redirect,menus, hierarchies/taxonomy,search)
+
+each have internal mvc if necessary
+
+modules provide data and funciton
+
+data assumed to be given in futures
+
+init()
+renderhtmlstatic(data)
+renderhtmldynamic(data)
+renderjsstatic(data)
+renderjsdynamic(data)
+rendercssstatic(data)
+rendercssdynamic(data)
+index(data)//for search
+moduleconfigscreen()
+itemconfigscreen(itemnumber)
+itemconfigdialog(itemnumber)
+listitems()
+modulename() #returns name
+updatetask()
+#only allow one
+get(context)
+put(context)
+post(context)
+delete(context)
+
+
+
+
+system:
+registeradress()
