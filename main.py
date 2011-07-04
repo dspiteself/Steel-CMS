@@ -9,7 +9,7 @@ import time
 from google.appengine.api import urlfetch
 from google.appengine.api import users
 from google.appengine.datastore import entity_pb
-import webapp2.webapp2
+from webapp2 import webapp2
 #from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
 
@@ -281,26 +281,9 @@ class AccountPage(webapp2.RequestHandler):
 
 
 
-class ConceptPage(webapp2.RequestHandler):
-  template="""
-  """
-  @context.toplevel
-  def get(self, **kwargs):
-    self.response.out.write(self.template % values)
-
-  @context.toplevel
-  def post(self):
-    # TODO: XSRF protection.
-    @tasklets.tasklet
-    def helper():
-        pass
-    yield model.transaction_async(helper)
-
-
 urls = [
   ('/', HomePage),
   ('/account', AccountPage),
-  ('/concept/<concept_id>', ConceptPage),
   ]
 
 app = webapp2.WSGIApplication(urls)
