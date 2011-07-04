@@ -9,7 +9,7 @@ import time
 from google.appengine.api import urlfetch
 from google.appengine.api import users
 from google.appengine.datastore import entity_pb
-import webapp2
+import webapp2.webapp2
 #from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
 
